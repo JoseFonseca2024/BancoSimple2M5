@@ -67,7 +67,7 @@
             }
         }
 
-        private void RealizarTransfrencia(int origenId, int destinoId, decimal monto)
+        private void RealizarTransfrencia(int origenId, int destinoId, decimal monto, string descripción)
         {
             //Transacciones
             //Niveles de aislamiento
@@ -91,7 +91,7 @@
                     {
                         Monto = monto,
                         Fecha = DateTime.Now,
-                        Descripción = "Transferencia",
+                        Descripción = descripción,
                         CuentaOrigenId = origenId,
                         CuentaDestinoId = destinoId
                     });
@@ -128,7 +128,7 @@
                 var form = new TransferenciaForm(cuentaOrigenId, cuentaDestinoId);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    RealizarTransfrencia(cuentaOrigenId, cuentaDestinoId, form.Monto);
+                    RealizarTransfrencia(cuentaOrigenId, cuentaDestinoId, form.Monto, form.Descripción);
                 }
             }
         }

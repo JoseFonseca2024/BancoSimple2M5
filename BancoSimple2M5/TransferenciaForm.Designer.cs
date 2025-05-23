@@ -34,13 +34,15 @@
             numMonto = new NumericUpDown();
             btnCancelar = new Button();
             btnAceptar = new Button();
+            label1 = new Label();
+            txtDescripción = new TextBox();
             ((System.ComponentModel.ISupportInitialize)numMonto).BeginInit();
             SuspendLayout();
             // 
             // lblOrigen
             // 
             lblOrigen.AutoSize = true;
-            lblOrigen.Location = new Point(39, 39);
+            lblOrigen.Location = new Point(39, 13);
             lblOrigen.Name = "lblOrigen";
             lblOrigen.Size = new Size(38, 15);
             lblOrigen.TabIndex = 0;
@@ -49,7 +51,7 @@
             // lblMonto
             // 
             lblMonto.AutoSize = true;
-            lblMonto.Location = new Point(39, 96);
+            lblMonto.Location = new Point(39, 70);
             lblMonto.Name = "lblMonto";
             lblMonto.Size = new Size(38, 15);
             lblMonto.TabIndex = 0;
@@ -58,7 +60,7 @@
             // lblDestino
             // 
             lblDestino.AutoSize = true;
-            lblDestino.Location = new Point(39, 147);
+            lblDestino.Location = new Point(39, 121);
             lblDestino.Name = "lblDestino";
             lblDestino.Size = new Size(38, 15);
             lblDestino.TabIndex = 0;
@@ -66,7 +68,7 @@
             // 
             // numMonto
             // 
-            numMonto.Location = new Point(217, 94);
+            numMonto.Location = new Point(217, 68);
             numMonto.Name = "numMonto";
             numMonto.Size = new Size(120, 23);
             numMonto.TabIndex = 1;
@@ -91,14 +93,32 @@
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += AceptarRegistro;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(39, 156);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Descripción:";
+            // 
+            // txtDescripción
+            // 
+            txtDescripción.Location = new Point(117, 153);
+            txtDescripción.Name = "txtDescripción";
+            txtDescripción.Size = new Size(356, 23);
+            txtDescripción.TabIndex = 11;
+            // 
             // TransferenciaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(522, 254);
+            Controls.Add(txtDescripción);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(numMonto);
+            Controls.Add(label1);
             Controls.Add(lblDestino);
             Controls.Add(lblMonto);
             Controls.Add(lblOrigen);
@@ -117,5 +137,7 @@
         private NumericUpDown numMonto;
         private Button btnCancelar;
         private Button btnAceptar;
+        private Label label1;
+        private TextBox txtDescripción;
     }
 }

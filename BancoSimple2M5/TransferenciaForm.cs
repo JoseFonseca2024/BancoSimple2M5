@@ -13,6 +13,8 @@ namespace BancoSimple2M5
 
         public Decimal Monto { get; private set; }
 
+        public string Descripción { get; private set; }
+
         private BancoSimple2M5Context context;
 
         public TransferenciaForm(int cuentaOrigenID, int cuentaDestinoID)
@@ -22,6 +24,8 @@ namespace BancoSimple2M5
             CuentaDestinoID = cuentaDestinoID;
             context = new BancoSimple2M5Context();
             CargarDatosCuentas();
+            //Maximo de monto a despositar
+            numMonto.Maximum = 1000000;
         }
 
         private void CargarDatosCuentas()
@@ -39,6 +43,7 @@ namespace BancoSimple2M5
             if (numMonto.Value > 0)
             {
                 Monto = numMonto.Value;
+                Descripción = txtDescripción.Text;
               
                 DialogResult = DialogResult.OK;
                 Close();
