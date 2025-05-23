@@ -1,9 +1,9 @@
-using BancoSimple2M5.Data;
-using Microsoft.EntityFrameworkCore;
-using BancoSimple2M5.Models;
+    using BancoSimple2M5.Data;
+    using Microsoft.EntityFrameworkCore;
+    using BancoSimple2M5.Models;
 
-namespace BancoSimple2M5
-{
+    namespace BancoSimple2M5
+    {
     public partial class Form1 : Form
     {
         private BancoSimple2M5Context _db = new BancoSimple2M5Context();
@@ -11,6 +11,7 @@ namespace BancoSimple2M5
         {
             InitializeComponent();
             CargarDatos();
+            tiempo.Start();
         }
 
         private void CargarDatos()
@@ -32,9 +33,13 @@ namespace BancoSimple2M5
                 ).ToList();
             dgvClientes.DataSource = _db.Cliente.ToList();
             dgvCuentas.DataSource = cuenta;
+            int contadorClientes = _db.Cliente.Count();
+            lblContador.Text = $"Clientes registrados: {contadorClientes.ToString()}";
+            int contadorCuentasActivas = _db.Cuenta.Count();
+            lblContadorCuentas.Text = $"Cuentas activas registradas: {contadorCuentasActivas.ToString()}";
         }
 
-        private void AgregarCliente (object sender, EventArgs e)
+        private void AgregarCliente(object sender, EventArgs e)
         {
             var form = new AgregarClienteForm();
             if (form.ShowDialog() == DialogResult.OK)
@@ -157,6 +162,19 @@ namespace BancoSimple2M5
                 (c => EF.Functions.Like(c.Nombre, $"%{like}%")).
                 ToList();
             dgvClientes.DataSource = clientes;
+        }
+
+
+        private void LimpiarSeleccion(object sender, EventArgs e)
+        {
+            dgvClientes.ClearSelection();
+            dgvCuentas.ClearSelection();
+        }
+
+        //Reloj para mostrar hora actual
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblFechaHora.Text = $"Hoy: {DateTime.Now}";
         }
     }
 }

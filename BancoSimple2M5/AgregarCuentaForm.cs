@@ -19,6 +19,8 @@ namespace BancoSimple2M5
         {
             InitializeComponent();
             ClienteID = clienteID;
+            //Maximo para permitir un rango ampleo en el saldo incial
+            numSaldo.Maximum = 1000000;
         }
 
         private void AceptarRegistro(object sender, EventArgs e)

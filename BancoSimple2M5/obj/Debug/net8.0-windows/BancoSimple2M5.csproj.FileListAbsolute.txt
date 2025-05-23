@@ -144,3 +144,4 @@ C:\Users\Usuario\Documents\UNI\2025\Programación II\BancoSimple2M5\BancoSimple2
 C:\Users\Usuario\Documents\UNI\2025\Programación II\BancoSimple2M5\BancoSimple2M5\obj\Debug\net8.0-windows\BancoSimple2M5.pdb
 C:\Users\Usuario\Documents\UNI\2025\Programación II\BancoSimple2M5\BancoSimple2M5\obj\Debug\net8.0-windows\BancoSimple2M5.genruntimeconfig.cache
 C:\Users\Usuario\Documents\UNI\2025\Programación II\BancoSimple2M5\BancoSimple2M5\obj\Debug\net8.0-windows\ref\BancoSimple2M5.dll
+C:\Users\Usuario\Documents\UNI\2025\Programación II\BancoSimple2M5\BancoSimple2M5\obj\Debug\net8.0-windows\BancoSimple2M5.sourcelink.json
