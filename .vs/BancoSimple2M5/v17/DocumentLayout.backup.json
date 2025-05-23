@@ -1,0 +1,281 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\transferenciaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\transferenciaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\models\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\models\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\vertransaccionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\vertransaccionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\agregarcuentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\agregarcuentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\vertransaccionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\vertransaccionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\data\\bancosimple2m5context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\data\\bancosimple2m5context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\transferenciaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\transferenciaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\models\\cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\models\\cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\agregarcuentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\agregarcuentaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\agregarclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\agregarclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|c:\\users\\usuario\\documents\\uni\\2025\\programaci\u00F3n ii\\bancosimple2m5\\bancosimple2m5\\agregarclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F605FAE-EBD5-4765-967A-AF280D090061}|BancoSimple2M5\\BancoSimple2M5.csproj|solutionrelative:bancosimple2m5\\agregarclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarCuentaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarCuentaForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\AgregarCuentaForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarCuentaForm.cs",
+              "RelativeToolTip": "BancoSimple2M5\\AgregarCuentaForm.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwCQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T02:22:43.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Form1.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\Form1.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "BancoSimple2M5\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:25:52.665Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Form1.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\Form1.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Form1.cs",
+              "RelativeToolTip": "BancoSimple2M5\\Form1.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAcwHgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:34:09.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Transaccion.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Models\\Transaccion.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\Models\\Transaccion.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Models\\Transaccion.cs*",
+              "RelativeToolTip": "BancoSimple2M5\\Models\\Transaccion.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:32:59.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransferenciaForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\TransferenciaForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\TransferenciaForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\TransferenciaForm.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "BancoSimple2M5\\TransferenciaForm.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T02:28:41.952Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VerTransaccionesForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\VerTransaccionesForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\VerTransaccionesForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\VerTransaccionesForm.cs",
+              "RelativeToolTip": "BancoSimple2M5\\VerTransaccionesForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T02:53:31.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransferenciaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\TransferenciaForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\TransferenciaForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\TransferenciaForm.cs*",
+              "RelativeToolTip": "BancoSimple2M5\\TransferenciaForm.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAvwB0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T02:30:55.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VerTransaccionesForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\VerTransaccionesForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\VerTransaccionesForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\VerTransaccionesForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "BancoSimple2M5\\VerTransaccionesForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T02:36:09.86Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BancoSimple2M5Context.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Data\\BancoSimple2M5Context.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\Data\\BancoSimple2M5Context.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Data\\BancoSimple2M5Context.cs",
+              "RelativeToolTip": "BancoSimple2M5\\Data\\BancoSimple2M5Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:27:03.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Models\\Cliente.cs",
+              "RelativeToolTip": "BancoSimple2M5\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:31:19.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cuenta.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Models\\Cuenta.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\Models\\Cuenta.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\Models\\Cuenta.cs",
+              "RelativeToolTip": "BancoSimple2M5\\Models\\Cuenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:32:13.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AgregarCuentaForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarCuentaForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\AgregarCuentaForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarCuentaForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "BancoSimple2M5\\AgregarCuentaForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T02:21:08.746Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AgregarClienteForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarClienteForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\AgregarClienteForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarClienteForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "BancoSimple2M5\\AgregarClienteForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:49:58.935Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AgregarClienteForm.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarClienteForm.cs",
+              "RelativeDocumentMoniker": "BancoSimple2M5\\AgregarClienteForm.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programaci\u00F3n II\\BancoSimple2M5\\BancoSimple2M5\\AgregarClienteForm.cs",
+              "RelativeToolTip": "BancoSimple2M5\\AgregarClienteForm.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:54:23.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
