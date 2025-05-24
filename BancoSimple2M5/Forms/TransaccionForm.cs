@@ -1,23 +1,22 @@
 ﻿using BancoSimple2M5.Data;
-using BancoSimple2M5.Models;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace BancoSimple2M5
 {
-    public partial class TransferenciaForm : Form
+    public partial class TransaccionForm : Form
     {
         public int CuentaOrigenID;
 
         public int CuentaDestinoID;
 
-        public Decimal Monto { get; private set; }
+        public decimal Monto { get; private set; }
 
         public string Descripción { get; private set; }
 
         private BancoSimple2M5Context context;
 
-        public TransferenciaForm(int cuentaOrigenID, int cuentaDestinoID)
+        public TransaccionForm(int cuentaOrigenID, int cuentaDestinoID)
         {
             InitializeComponent();
             CuentaOrigenID = cuentaOrigenID;
@@ -44,13 +43,13 @@ namespace BancoSimple2M5
             {
                 Monto = numMonto.Value;
                 Descripción = txtDescripción.Text;
-              
+
                 DialogResult = DialogResult.OK;
                 Close();
             }
             else
             {
-                MessageBox.Show("Ingrese un monto válido mayor a 0");
+                MessageBox.Show("Ingrese un monto válido mayor a 0", "Monto no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

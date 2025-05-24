@@ -1,138 +1,143 @@
-    using BancoSimple2M5.Data;
-    using Microsoft.EntityFrameworkCore;
-    using BancoSimple2M5.Models;
+using BancoSimple2M5.Data;
 using BancoSimple2M5.Services;
 
 namespace BancoSimple2M5
-    {
+{
     public partial class Form1 : Form
     {
         private BancoSimple2M5Context _db = new BancoSimple2M5Context();
-        
+
         public Form1()
         {
             InitializeComponent();
             CargarDatos();
-            tiempo.Start();
+            reloj.Start();
         }
 
         private void CargarDatos()
         {
+            dgvClientes.ClearSelection();
+            dgvCuentas.ClearSelection();
+
+            //Uso de cliente_service y sus metodos de obtención de datos
+            var clienteService = new ClienteService(_db);
+            dgvClientes.DataSource = clienteService.ObtenerClientes();
+            lblContador.Text = clienteService.ContarCLientes();
+
             //Uso de cuenta_service y sus metodos de obtención de datos
-            var cuentaService = new Cuenta_Services(_db);
+            var cuentaService = new CuentaService(_db);
             dgvCuentas.DataSource = cuentaService.ObtenerCuentasActivas();
             lblContadorCuentas.Text = cuentaService.ContadorCuentas();
 
-            //Uso de cliente_service y sus metodos de obtención de datos
-            var clienteService = new Cliente_Service(_db);
-            dgvClientes.DataSource = clienteService.ObtenerClientes();
-            lblContador.Text = clienteService.ContarCLientes();
         }
 
-        //Usar Metodo de Cliente_service para agregar
-        private void AgregarCliente(object sender, EventArgs e)
+        //Evento para agregar al cliente a la base de datos
+        private void OnClienteAgragrado(object sender, EventArgs e)
         {
             var form = new AgregarClienteForm();
-            var clienteService = new Cliente_Service(_db);
+            var clienteService = new ClienteService(_db);
             if (form.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
                     clienteService.AgregarCliente(form.NuevoCliente);
                     CargarDatos();
-                    MessageBox.Show("Cliente agregado exitosamente." , "Éxito" , MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show(ex.Message);
-                
+
                 }
-                
+
             }
         }
 
-        //Usar Metodo de Cuenta_service para agregar
-        private void AgregarCuenta(object sender, EventArgs e)
+        //Evento para agregar cuenta
+        private void OnCuentaAgregada(object sender, EventArgs e)
         {
-           
+
             if (dgvClientes.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccione un cliente primero");
+                MessageBox.Show("Seleccione un cliente primero", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
             }
             var clienteId = (int)dgvClientes.SelectedRows[0].Cells["ClienteId"].Value;
             var form = new AgregarCuentaForm(clienteId);
-            
+
             if (form.ShowDialog() == DialogResult.OK)
             {
-                var cuentaService = new Cuenta_Services(_db);
+                var cuentaService = new CuentaService(_db);
                 cuentaService.AgregarCuenta(form.NuevaCuenta);
                 CargarDatos();
             }
-        }  
+        }
 
-        // Usar metodo de Transferenciaservice
-        private void RegistrarTransferencia(object sender, EventArgs e)
+        // Evento para realizar y registrar transferecnia
+        private void OnTransferenciaRealizada(object sender, EventArgs e)
         {
             if (dgvCuentas.SelectedRows.Count != 2)
             {
-                MessageBox.Show("Seleccione exactamente 2 cuentas");
+                MessageBox.Show("Seleccione exactamente 2 cuentas", "Sobre-selección", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
 
             }
             else
             {
+                //Primera cuenta seleccionada
                 var cuentaOrigenId = (int)dgvCuentas.SelectedRows[1].Cells["CuentaId"].Value;
+                //Segunda cuenta seleccionada
                 var cuentaDestinoId = (int)dgvCuentas.SelectedRows[0].Cells["CuentaId"].Value;
 
-                var form = new TransferenciaForm(cuentaOrigenId, cuentaDestinoId);
-                var transferenciaService = new Transferencia_Service(_db);
+                var form = new TransaccionForm(cuentaOrigenId, cuentaDestinoId);
+                var transferenciaService = new TransaccionService(_db);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-                        transferenciaService.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, form.Monto, form.Descripción);
-                        MessageBox.Show("Transferencia Realizada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        transferenciaService.RealizarTransaccion(cuentaOrigenId, cuentaDestinoId, form.Monto, form.Descripción);
                         CargarDatos();
-                    } catch (Exception ex){
-
-                        MessageBox.Show(ex.Message);
-                    
                     }
-                    
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
             }
         }
 
         //Usar Metodo de Cuenta_service para agregar
-        private void DesactivarCuenta(object sender, EventArgs e)
+        private void OnCuentaDesactivada(object sender, EventArgs e)
         {
             if (dgvCuentas.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecciones una cuenta para desactivar");
+                MessageBox.Show("Selecciones una cuenta para desactivar", "Cuentas no seleccionadas", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
             }
             var cuentaId = (int)dgvCuentas.SelectedRows[0].Cells["CuentaId"].Value;
-            var cuentaService = new Cuenta_Services(_db);
+            var cuentaService = new CuentaService(_db);
             cuentaService.DesactivarCuenta(cuentaId);
             CargarDatos();
         }
 
-        private void VerTransacciones(object sender, EventArgs e)
+        private void OnVerTransacciones(object sender, EventArgs e)
         {
             var form = new VerTransaccionesForm();
             form.ShowDialog();
 
         }
 
-        private void BuscarCliente(object sender, EventArgs e)
+        private void OnClienteBuscado(object sender, EventArgs e)
         {
             // busqueda con patrones con like
             var like = txtBusqueda.Text;
-            var cliente_service = new Cliente_Service(_db);
+            var cliente_service = new ClienteService(_db);
             cliente_service.BuscarCliente(like, dgvClientes);
         }
 
 
-        private void LimpiarSeleccion(object sender, EventArgs e)
+        private void OnSeleccionLimpiada(object sender, EventArgs e)
         {
             dgvClientes.ClearSelection();
             dgvCuentas.ClearSelection();
@@ -142,6 +147,15 @@ namespace BancoSimple2M5
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblFechaHora.Text = $"Hoy: {DateTime.Now}";
+        }
+
+        //Carga de los DataGriedview sin seleccionar algun objeto
+        private void CargarsinSeleccion(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvClientes.ClearSelection();
+            dgvCuentas.ClearSelection();
+            dgvClientes.CurrentCell = null;
+            dgvCuentas.CurrentCell = null;
         }
     }
 }

@@ -10,7 +10,7 @@
     <Compile Update="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\TransferenciaForm.cs">
+    <Compile Update="Forms\TransaccionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\VerTransaccionesForm.cs">

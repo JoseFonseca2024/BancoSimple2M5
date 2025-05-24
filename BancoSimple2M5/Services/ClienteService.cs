@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BancoSimple2M5.Services
 {
-    public class Cliente_Service
+    public class ClienteService
     {
         private readonly BancoSimple2M5Context _context;
-        public Cliente_Service(BancoSimple2M5Context context)
+        public ClienteService(BancoSimple2M5Context context)
         {
             _context = context;
         }
@@ -19,6 +19,7 @@ namespace BancoSimple2M5.Services
             {
                 _context.Cliente.Add(cliente);
                 _context.SaveChanges();
+                MessageBox.Show("Cliente agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -31,7 +32,7 @@ namespace BancoSimple2M5.Services
             return _context.Cliente.ToList();
         }
 
-        public void BuscarCliente (string cliente, DataGridView dg)
+        public void BuscarCliente(string cliente, DataGridView dg)
         {
             var clientes = _context.Cliente.
                 Where
@@ -42,7 +43,7 @@ namespace BancoSimple2M5.Services
 
         public string ContarCLientes()
         {
-           int contador =  _context.Cliente.Count();
+            int contador = _context.Cliente.Count();
             return $"Clientes registrados: {contador}";
         }
     }

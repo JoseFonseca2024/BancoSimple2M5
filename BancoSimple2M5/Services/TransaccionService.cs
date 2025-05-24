@@ -4,22 +4,22 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BancoSimple2M5.Services
 {
-    public class Transferencia_Service
+    public class TransaccionService
     {
         //Declaración de la dependencia con la base de datos
         private readonly BancoSimple2M5Context _context;
 
-        public Transferencia_Service(BancoSimple2M5Context context)
+        public TransaccionService(BancoSimple2M5Context context)
         {
             _context = context;
         }
 
-        public List <Transaccion> ObtenerTransferencias ()
+        public List<Transaccion> ObtenerTransaccion()
         {
-            return _context.Transaccion.ToList ();
+            return _context.Transaccion.ToList();
         }
 
-        public void RealizarTransferencia(int origenID, int destinoID, decimal monto, string descripción)
+        public void RealizarTransaccion(int origenID, int destinoID, decimal monto, string descripción)
         {
             //Transacciones 
             //Niveles de aislamiento

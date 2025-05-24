@@ -1,6 +1,6 @@
 ﻿namespace BancoSimple2M5
 {
-    partial class TransferenciaForm
+    partial class TransaccionForm
     {
         /// <summary>
         /// Required designer variable.
