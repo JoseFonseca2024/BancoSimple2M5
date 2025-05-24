@@ -44,5 +44,12 @@ namespace BancoSimple2M5.Services
                     c.Cliente.Nombre
                 }).ToList<object>();
         }
+
+        //Contador de cuentas registradas
+        public string ContadorCuentas ()
+        {
+            int contador = _context.Cuenta.Count();
+            return $"Cuentas activas registradas: {contador}";
+        }
     }
 }

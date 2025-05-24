@@ -1,8 +1,9 @@
     using BancoSimple2M5.Data;
     using Microsoft.EntityFrameworkCore;
     using BancoSimple2M5.Models;
+using BancoSimple2M5.Services;
 
-    namespace BancoSimple2M5
+namespace BancoSimple2M5
     {
     public partial class Form1 : Form
     {
@@ -16,27 +17,14 @@
 
         private void CargarDatos()
         {
-            var cuenta = _db.Cuenta.
-                Include(c => c.Cliente).
-                Where(c => c.Activa).
-                Select(c => new
-                {
-                    c.CuentaID,
-                    c.NumeroCuenta,
-                    c.Saldo,
-                    c.Activa,
-                    c.ClienteID,
-                    c.Cliente.Nombre
-                }
+            //Uso de cuenta_service y sus metodos de obtención de datos
+            var cuentaService = new Cuenta_Services(_db);
+            dgvCuentas.DataSource = cuentaService.ObtenerCuentasActivas();
+            lblContadorCuentas.Text = cuentaService.ContadorCuentas();
 
-
-                ).ToList();
             dgvClientes.DataSource = _db.Cliente.ToList();
-            dgvCuentas.DataSource = cuenta;
             int contadorClientes = _db.Cliente.Count();
             lblContador.Text = $"Clientes registrados: {contadorClientes.ToString()}";
-            int contadorCuentasActivas = _db.Cuenta.Count();
-            lblContadorCuentas.Text = $"Cuentas activas registradas: {contadorCuentasActivas.ToString()}";
         }
 
         private void AgregarCliente(object sender, EventArgs e)
