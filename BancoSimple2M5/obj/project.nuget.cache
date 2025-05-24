@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W29OoJ8TyV0=",
+  "dgSpecHash": "jmDquWvHdXg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Documents\\UNI\\2025\\Programación II\\BancoSimple2M5\\BancoSimple2M5\\BancoSimple2M5.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Source\\Repos\\BancoSimple2M5\\BancoSimple2M5\\BancoSimple2M5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
