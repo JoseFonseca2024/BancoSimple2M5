@@ -8,6 +8,7 @@ namespace BancoSimple2M5
     public partial class Form1 : Form
     {
         private BancoSimple2M5Context _db = new BancoSimple2M5Context();
+        
         public Form1()
         {
             InitializeComponent();
@@ -32,17 +33,27 @@ namespace BancoSimple2M5
         private void AgregarCliente(object sender, EventArgs e)
         {
             var form = new AgregarClienteForm();
+            var clienteService = new Cliente_Service(_db);
             if (form.ShowDialog() == DialogResult.OK)
             {
-                _db.Cliente.Add(form.NuevoCliente);
-                _db.SaveChanges();
-                CargarDatos();
+                try
+                {
+                    clienteService.AgregarCliente(form.NuevoCliente);
+                    CargarDatos();
+                    MessageBox.Show("Cliente agregado exitosamente." , "Éxito" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                
+                }
+                
             }
         }
 
         //Usar Metodo de Cuenta_service para agregar
         private void AgregarCuenta(object sender, EventArgs e)
         {
+           
             if (dgvClientes.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleccione un cliente primero");
@@ -50,59 +61,14 @@ namespace BancoSimple2M5
             }
             var clienteId = (int)dgvClientes.SelectedRows[0].Cells["ClienteId"].Value;
             var form = new AgregarCuentaForm(clienteId);
+            
             if (form.ShowDialog() == DialogResult.OK)
             {
-                _db.Cuenta.Add(form.NuevaCuenta);
-                _db.SaveChanges();
+                var cuentaService = new Cuenta_Services(_db);
+                cuentaService.AgregarCuenta(form.NuevaCuenta);
                 CargarDatos();
             }
-        }
-
-        //Eliminar
-        private void RealizarTransfrencia(int origenId, int destinoId, decimal monto, string descripción)
-        {
-            //Transacciones
-            //Niveles de aislamiento
-            using var transaccion = _db.Database.BeginTransaction(System.Data.IsolationLevel.Serializable);
-            {
-                try
-                {
-                    var cuentaOrigen = _db.Cuenta.FirstOrDefault(c => c.CuentaID == origenId);
-                    var cuentaDestino = _db.Cuenta.FirstOrDefault(c => c.CuentaID == destinoId);
-
-                    if (cuentaOrigen.Saldo < monto)
-                    {
-                        throw new Exception("Saldo Insuficiente ");
-                    }
-
-                    cuentaOrigen.Saldo -= monto;
-                    cuentaDestino.Saldo += monto;
-
-                    //Registrar la transaccion
-                    _db.Transaccion.Add(new Transaccion
-                    {
-                        Monto = monto,
-                        Fecha = DateTime.Now,
-                        Descripción = descripción,
-                        CuentaOrigenId = origenId,
-                        CuentaDestinoId = destinoId
-                    });
-                    _db.SaveChanges();
-                    //Transaccion completada
-                    transaccion.Commit();
-                    MessageBox.Show("Transferencia realizada con exito");
-                    CargarDatos();
-
-
-                }
-                catch (Exception ex)
-                {
-                    //Reversion de transacciones
-                    transaccion.Rollback();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
+        }  
 
         // Usar metodo de Transferenciaservice
         private void RegistrarTransferencia(object sender, EventArgs e)
@@ -119,9 +85,20 @@ namespace BancoSimple2M5
                 var cuentaDestinoId = (int)dgvCuentas.SelectedRows[0].Cells["CuentaId"].Value;
 
                 var form = new TransferenciaForm(cuentaOrigenId, cuentaDestinoId);
+                var transferenciaService = new Transferencia_Service(_db);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    RealizarTransfrencia(cuentaOrigenId, cuentaDestinoId, form.Monto, form.Descripción);
+                    try
+                    {
+                        transferenciaService.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, form.Monto, form.Descripción);
+                        MessageBox.Show("Transferencia Realizada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDatos();
+                    } catch (Exception ex){
+
+                        MessageBox.Show(ex.Message);
+                    
+                    }
+                    
                 }
             }
         }
@@ -134,9 +111,8 @@ namespace BancoSimple2M5
                 MessageBox.Show("Selecciones una cuenta para desactivar");
             }
             var cuentaId = (int)dgvCuentas.SelectedRows[0].Cells["CuentaId"].Value;
-            var cuenta = _db.Cuenta.Find(cuentaId);
-            cuenta.Activa = false;
-            _db.SaveChanges();
+            var cuentaService = new Cuenta_Services(_db);
+            cuentaService.DesactivarCuenta(cuentaId);
             CargarDatos();
         }
 
