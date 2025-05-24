@@ -1,4 +1,5 @@
 ﻿using BancoSimple2M5.Data;
+using BancoSimple2M5.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,8 @@ namespace BancoSimple2M5
 
         private void CargarTransferencias()
         {
-            dgvTransacciones.DataSource = _context.Transaccion.ToList();
+            var transferecnia_server = new Transferencia_Service(_context);
+            dgvTransacciones.DataSource = transferecnia_server.ObtenerTransferencias();
         }
 
         private void Aceptar(object sender, EventArgs e)

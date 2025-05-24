@@ -39,5 +39,11 @@ namespace BancoSimple2M5.Services
                 ToList();
             dg.DataSource = clientes;
         }
+
+        public string ContarCLientes()
+        {
+           int contador =  _context.Cliente.Count();
+            return $"Clientes registrados: {contador}";
+        }
     }
 }

@@ -22,11 +22,13 @@ namespace BancoSimple2M5
             dgvCuentas.DataSource = cuentaService.ObtenerCuentasActivas();
             lblContadorCuentas.Text = cuentaService.ContadorCuentas();
 
-            dgvClientes.DataSource = _db.Cliente.ToList();
-            int contadorClientes = _db.Cliente.Count();
-            lblContador.Text = $"Clientes registrados: {contadorClientes.ToString()}";
+            //Uso de cliente_service y sus metodos de obtención de datos
+            var clienteService = new Cliente_Service(_db);
+            dgvClientes.DataSource = clienteService.ObtenerClientes();
+            lblContador.Text = clienteService.ContarCLientes();
         }
 
+        //Usar Metodo de Cliente_service para agregar
         private void AgregarCliente(object sender, EventArgs e)
         {
             var form = new AgregarClienteForm();
@@ -38,6 +40,7 @@ namespace BancoSimple2M5
             }
         }
 
+        //Usar Metodo de Cuenta_service para agregar
         private void AgregarCuenta(object sender, EventArgs e)
         {
             if (dgvClientes.SelectedRows.Count == 0)
@@ -55,6 +58,7 @@ namespace BancoSimple2M5
             }
         }
 
+        //Eliminar
         private void RealizarTransfrencia(int origenId, int destinoId, decimal monto, string descripción)
         {
             //Transacciones
@@ -100,6 +104,7 @@ namespace BancoSimple2M5
             }
         }
 
+        // Usar metodo de Transferenciaservice
         private void RegistrarTransferencia(object sender, EventArgs e)
         {
             if (dgvCuentas.SelectedRows.Count != 2)
@@ -121,6 +126,7 @@ namespace BancoSimple2M5
             }
         }
 
+        //Usar Metodo de Cuenta_service para agregar
         private void DesactivarCuenta(object sender, EventArgs e)
         {
             if (dgvCuentas.SelectedRows.Count == 0)

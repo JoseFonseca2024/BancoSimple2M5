@@ -48,7 +48,7 @@
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(107, 33);
             btnAceptar.TabIndex = 1;
-            btnAceptar.Text = "button1";
+            btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += Aceptar;
             // 
@@ -60,6 +60,7 @@
             Controls.Add(btnAceptar);
             Controls.Add(dgvTransacciones);
             Name = "VerTransaccionesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VerTransaccionesForm";
             ((System.ComponentModel.ISupportInitialize)dgvTransacciones).EndInit();
             ResumeLayout(false);

@@ -14,6 +14,11 @@ namespace BancoSimple2M5.Services
             _context = context;
         }
 
+        public List <Transaccion> ObtenerTransferencias ()
+        {
+            return _context.Transaccion.ToList ();
+        }
+
         public void RealizarTransferencia(int origenID, int destinoID, decimal monto, string descripción)
         {
             //Transacciones 
