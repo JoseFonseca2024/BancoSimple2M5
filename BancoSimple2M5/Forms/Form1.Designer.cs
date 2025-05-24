@@ -242,6 +242,7 @@
             Controls.Add(dgvCuentas);
             Controls.Add(dgvClientes);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCuentas).EndInit();

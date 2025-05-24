@@ -145,11 +145,8 @@ namespace BancoSimple2M5
         {
             // busqueda con patrones con like
             var like = txtBusqueda.Text;
-            var clientes = _db.Cliente.
-                Where
-                (c => EF.Functions.Like(c.Nombre, $"%{like}%")).
-                ToList();
-            dgvClientes.DataSource = clientes;
+            var cliente_service = new Cliente_Service(_db);
+            cliente_service.BuscarCliente(like, dgvClientes);
         }
 
 

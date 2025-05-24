@@ -1,5 +1,6 @@
 ﻿using BancoSimple2M5.Data;
 using BancoSimple2M5.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BancoSimple2M5.Services
 {
@@ -28,6 +29,15 @@ namespace BancoSimple2M5.Services
         public List<Cliente> ObtenerClientes()
         {
             return _context.Cliente.ToList();
+        }
+
+        public void BuscarCliente (string cliente, DataGridView dg)
+        {
+            var clientes = _context.Cliente.
+                Where
+                (c => EF.Functions.Like(c.Nombre, $"%{cliente}%")).
+                ToList();
+            dg.DataSource = clientes;
         }
     }
 }
