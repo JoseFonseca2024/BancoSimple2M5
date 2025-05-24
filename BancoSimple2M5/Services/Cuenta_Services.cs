@@ -1,11 +1,6 @@
 ﻿using BancoSimple2M5.Data;
 using BancoSimple2M5.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BancoSimple2M5.Services
 {
