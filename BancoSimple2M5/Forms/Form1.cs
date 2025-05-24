@@ -107,7 +107,7 @@ namespace BancoSimple2M5
             }
         }
 
-        //Usar Metodo de Cuenta_service para agregar
+        //Evento para desactivar cuenta
         private void OnCuentaDesactivada(object sender, EventArgs e)
         {
             if (dgvCuentas.SelectedRows.Count == 0)
@@ -121,6 +121,7 @@ namespace BancoSimple2M5
             CargarDatos();
         }
 
+        //Evento para llamar form y ver transacciones
         private void OnVerTransacciones(object sender, EventArgs e)
         {
             var form = new VerTransaccionesForm();
@@ -128,6 +129,7 @@ namespace BancoSimple2M5
 
         }
 
+        //Evento para realizar busqueda de cliente por su nombre
         private void OnClienteBuscado(object sender, EventArgs e)
         {
             // busqueda con patrones con like
@@ -136,7 +138,7 @@ namespace BancoSimple2M5
             cliente_service.BuscarCliente(like, dgvClientes);
         }
 
-
+        //boton para limpiar la seleccion en los dataGriedView
         private void OnSeleccionLimpiada(object sender, EventArgs e)
         {
             dgvClientes.ClearSelection();
@@ -153,7 +155,7 @@ namespace BancoSimple2M5
         private void CargarsinSeleccion(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvClientes.ClearSelection();
-            dgvCuentas.ClearSelection();
+            dgvCuentas.ClearSelection();    
             dgvClientes.CurrentCell = null;
             dgvCuentas.CurrentCell = null;
         }
